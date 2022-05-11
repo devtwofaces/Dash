@@ -7,7 +7,6 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import javax.inject.Qualifier
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
@@ -23,6 +22,7 @@ object DatabaseModule {
         .addCallback(callback)
         .build()
 
+    // Dao is Singleton by default (ROOM Feature)
     @Provides
     fun provideTaskDaoInstance(taskDatabase: TaskDatabase) = taskDatabase.getTaskDao()
 

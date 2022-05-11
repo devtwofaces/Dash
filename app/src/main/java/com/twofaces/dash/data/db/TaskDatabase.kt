@@ -26,8 +26,10 @@ abstract class TaskDatabase: RoomDatabase() {
             super.onCreate(db)
             coroutineScope.launch {
                 taskRepositoryProvider.get().deleteAll()
-
-
+                taskRepositoryProvider.get().insert(Task("Push to Github Repo"))
+                taskRepositoryProvider.get().insert(Task("Order Food"))
+                taskRepositoryProvider.get().insert(Task("Buy Double mint"))
+                taskRepositoryProvider.get().insert(Task("Take a walk!"))
             }
         }
 
