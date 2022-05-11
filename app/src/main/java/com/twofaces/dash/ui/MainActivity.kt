@@ -1,7 +1,8 @@
-package com.twofaces.dash
+package com.twofaces.dash.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.twofaces.dash.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
